@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarvis AI Assistant</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="screen">
+            <div class="header">
+                <h1>J.A.R.V.I.S</h1>
+                <p>Your Personal Assistant</p>
+            </div>
+            <div class="mic-container">
+                <div class="mic" onclick="startListening()">
+                    <div class="pulse"></div>
+                </div>
+                <p class="instruction">Click the Mic and Speak!</p>
+            </div>
+            <div class="display">
+                <div class="command-box">
+                    <h3>Command: <span id="commandText">...</span></h3>
+                </div>
+                <div class="response-box">
+                    <h3>Response: <span id="responseText">Waiting for command...</span></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

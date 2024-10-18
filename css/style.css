@@ -1,0 +1,140 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #121212, #000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container and Screen */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.screen {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #00ffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px rgba(0, 255, 255, 0.5);
+    text-align: center;
+    width: 400px;
+    animation: fadeIn 1s ease;
+}
+
+/* Header */
+.header h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #00ffff;
+    text-shadow: 0px 0px 10px #00ffff;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #fff;
+    text-shadow: 0px 0px 5px #00ffff;
+    margin-bottom: 30px;
+}
+
+/* Command and Response Boxes */
+.display {
+    margin-top: 20px;
+}
+
+.command-box, .response-box {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.2);
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #00ffff;
+    margin: 0;
+    text-align: left;
+}
+
+#commandText, #responseText {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Mic Button */
+.mic-container {
+    position: relative;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mic {
+    background: #00ffff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    transition: transform 0.3s ease;
+}
+
+.mic:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff;
+}
+
+.pulse {
+    width: 120px;
+    height: 120px;
+    background: rgba(0, 255, 255, 0.3);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: pulseEffect 2s infinite ease-in-out;
+}
+
+@keyframes pulseEffect {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+/* Animation for Screen */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Instruction Text */
+.instruction {
+    font-size: 1rem;
+    color: #00ffff;
+    text-shadow: 0px 0px 5px #00ffff;
+    margin-top: 10px;
+}
